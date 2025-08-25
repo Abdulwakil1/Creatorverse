@@ -48,34 +48,45 @@ function ShowCreators({ creators = [], loading = false }) {
                 <h2 className="text-xl font-bold text-sky-400 tracking-wide">
                   {creator.name.toUpperCase()}
                 </h2>
-                <div className="flex gap-2">
-                  <FaInfoCircle
-                    className="text-white cursor-pointer hover:text-sky-300"
-                    size={20}
-                    onClick={() => navigate(`/creators/view/${creator.id}`)}
-                  />
-                  {/* <FaEdit
-                    className="text-white cursor-pointer hover:text-sky-300"
-                    size={20}
-                  /> */}
-                  <FaEdit
-                    className="text-white cursor-pointer hover:text-sky-300"
-                    size={20}
-                    onClick={() => navigate(`/creators/edit/${creator.id}`)}
-                  />
+                <div className="flex gap-4 items-center">
+                  {/* Info Icon with Tooltip in a span*/}
+                  <div className="relative group">
+                    <FaInfoCircle
+                      className="text-white cursor-pointer hover:text-sky-300"
+                      size={20}
+                      onClick={() => navigate(`/creators/view/${creator.id}`)}
+                    />
+                    <span className="absolute bottom-full left-1/2 mb-2 w-max px-2 py-1 rounded bg-gray-800 text-white text-xs opacity-0 group-hover:opacity-100 transition transform -translate-x-1/2">
+                      View Creator Info
+                    </span>
+                  </div>
+
+                  {/* Edit Icon with Tooltip in a span*/}
+                  <div className="relative group">
+                    <FaEdit
+                      className="text-white cursor-pointer hover:text-sky-300"
+                      size={20}
+                      onClick={() => navigate(`/creators/edit/${creator.id}`)}
+                    />
+                    <span className="absolute bottom-full right-2 mb-2 w-max px-2 py-1 rounded bg-gray-800 text-white text-xs opacity-0 group-hover:opacity-100 transition transform translate-x-1/4">
+                      Edit Creator
+                    </span>
+                  </div>
                 </div>
               </div>
-
-              {/* Social media icons */}
+              {/* Social media icons with tooltips in spans*/}
               <div className="flex gap-3 mb-2">
                 {creator.youtube && (
                   <a
                     href={creator.youtube}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-white hover:text-red-500"
+                    className="relative group text-white hover:text-red-500"
                   >
                     <FaYoutube size={20} />
+                    <span className="absolute bottom-full left-1/2 mb-2 w-max px-2 py-1 rounded bg-gray-800 text-white text-xs opacity-0 group-hover:opacity-100 transition transform -translate-x-[33%]">
+                      YouTube
+                    </span>
                   </a>
                 )}
                 {creator.x && (
@@ -83,9 +94,12 @@ function ShowCreators({ creators = [], loading = false }) {
                     href={creator.x}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-white hover:text-blue-400"
+                    className="relative group text-white hover:text-blue-400"
                   >
                     <FaXTwitter size={20} />
+                    <span className="absolute bottom-full left-1/2 mb-2 w-max px-2 py-1 rounded bg-gray-800 text-white text-xs opacity-0 group-hover:opacity-100 transition transform -translate-x-1/2">
+                      X (Twitter)
+                    </span>
                   </a>
                 )}
                 {creator.instagram && (
@@ -93,9 +107,12 @@ function ShowCreators({ creators = [], loading = false }) {
                     href={creator.instagram}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-white hover:text-pink-500"
+                    className="relative group text-white hover:text-pink-500"
                   >
                     <FaInstagram size={20} />
+                    <span className="absolute bottom-full left-1/2 mb-2 w-max px-2 py-1 rounded bg-gray-800 text-white text-xs opacity-0 group-hover:opacity-100 transition transform -translate-x-1/2">
+                      Instagram
+                    </span>
                   </a>
                 )}
               </div>
