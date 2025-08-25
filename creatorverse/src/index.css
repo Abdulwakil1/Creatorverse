@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+/* Global CSS */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%; /* ensure full height */
+  min-height: 100%;
+  overflow-x: hidden; /* hides horizontal white margin */
+  background-color: rgb(0, 6, 13); /*match main dark theme*/
+}
+
+:root {
+  color-scheme: light dark;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
