@@ -84,7 +84,7 @@ function ShowCreators({ creators = [], loading = false }) {
                     className="relative group text-white hover:text-red-500"
                   >
                     <FaYoutube size={20} />
-                    <span className="absolute bottom-full left-1/2 mb-2 w-max px-2 py-1 rounded bg-gray-800 text-white text-xs opacity-0 group-hover:opacity-100 transition transform -translate-x-[33%]">
+                    <span className="absolute bottom-full left-1/2 mb-2 w-max px-2 py-1 rounded bg-gray-800 text-white text-xs opacity-0 group-hover:opacity-100 transition transform -translate-x-[35%]">
                       YouTube
                     </span>
                   </a>
