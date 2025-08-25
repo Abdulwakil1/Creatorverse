@@ -1,6 +1,6 @@
 // src/components/Card.jsx
 // import React from "react";
-import { FaEdit, FaTrash } from "react-icons/fa";
+import { FaEdit, FaTrash, FaHome } from "react-icons/fa";
 
 export default function Card({ creator, socials, onEdit, onDelete, onBack }) {
   return (
@@ -71,9 +71,11 @@ export default function Card({ creator, socials, onEdit, onDelete, onBack }) {
                 className="w-full text-center text-lg font-semibold
                            bg-gray-800 text-white rounded-lg py-3
                            border-2 border-transparent hover:border-gray-500 hover:bg-gray-700
-                           transition-colors duration-200 cursor-pointer"
+                           transition-colors duration-200 cursor-pointer 
+                           flex items-center justify-center gap-2"
               >
-                Back to Home
+                {/* Back to Home */}
+                <FaHome /> Back to Home
               </button>
 
               <button
