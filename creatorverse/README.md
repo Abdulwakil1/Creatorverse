@@ -49,7 +49,9 @@ The following **additional** features are implemented:
 
 ## Video Walkthrough
 
-Walkthrough is coming soon:
+## Demo
+
+![App Demo](./docs/demo.gif)
 
 ---
 
